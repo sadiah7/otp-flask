@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script src="">
+        function myTimer(event){
+            button = document.getElementById("button");
+            button.disabled = true;
+            // setTimeout(function(){button.disabled = false;},5000);
+            }
+    </script>
+</head>
+<body>
+    <form action="/validateOTP" method="post">
+        <p>Enter OTP: </p>
+        <input type="text" name="Otp" id="Otp">
+        <input type="submit" value="Submit" name="submit">
+    </form>
+    <p>If you did not recieve OTP the try again</p>
+    <!-- <form action="/resendOTP" method="get" onload="myTimer()"> -->
+    <button type="button" name="button" id="button" onload="myTimer(event)">Try again</button>
+    <!-- </form> -->
+</body>
+</html> 
