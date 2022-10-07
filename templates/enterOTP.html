@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
-    <script>
+    <!-- <script>
         function myTimer(event){
             form = document.getElementById("form");
             form.style.display = 'none'
-            setTimeout(function(){form.style.display = 'block';},5000);
+            // setTimeout(function(){str.style.display = 'block';}, 5000);
             }
+    </script> -->
+    <script language="javascript" type="text/javascript">
+
+        window.onload = function() {
+            form = document.getElementById("form");
+            setTimeout(function(){form.style.display = 'block';}, 5000);
+        }
+        
     </script>
 </head>
 <body>
@@ -19,8 +27,8 @@
         <input type="text" name="Otp" id="Otp">
         <input type="submit" value="Submit" name="submit">
     </form>
-    <p>If you did not recieve OTP the try again after 1 minute.</p>
-    <form action="/resendOTP" method="post" onload="myTimer(event)" id="form">
+    <p id = "str">If you did not recieve OTP the try again after 1 minute.</p>
+    <form action="/resendOTP" method="post"  id="form" style="display: none;">
         <input type="submit" id="button" value="Try again">
     </form>
 </body>
